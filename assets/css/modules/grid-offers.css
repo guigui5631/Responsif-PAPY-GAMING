@@ -1,0 +1,152 @@
+@import url(/assets/css/base.css);
+@import url(/assets/css/components/utils/vignettes.css);
+@import url(/assets/css/modules/pq-choisir-nos-offres.css);
+@import url(/assets/css/modules/avis-clients.css);
+
+/* ================================================================
+   4. SECTIONS
+   ================================================================ */
+
+section { 
+    padding: 6rem 0; 
+}
+
+.spacing-reviews{
+    padding-bottom: 10rem;
+}
+
+.section-glass {
+    background: var(--c-bg-card);           /* Fond personnalisé */
+    border: 1px solid var(--c-border);      /* Bordure fine */
+    border-radius: 25px;                    /* Coins arrondis */
+    padding: 4rem;                          /* Espacement interne */
+    backdrop-filter: blur(10px);            /* Effet de flou (glassmorphism) */
+    box-shadow: 0 0 50px rgba(0,0,0,0.3);   /* Ombre diffuse */
+    margin-top: 2rem;                       /* Espacement au-dessus */
+}
+
+
+/* ================================================================
+   SECTION OFFRES — VERSION AMÉLIORÉE
+   ================================================================ */
+
+/* --- Grille des offres --- */
+.game-offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Colonnes adaptatives */
+    gap: 2rem; /* Espacement entre les cartes */
+}
+
+/* --- Carte d’offre --- */
+.game-offer-card {
+    background-color: var(--c-bg-card);
+    border-radius: 16px; /* Coins arrondis */
+    border: 1px solid var(--c-border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-offer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px var(--c-glow-purple);
+}
+
+/* --- Image --- */
+.offer-card-header img {
+    width: 100%; /* Image responsive */
+    height: 160px; /* Hauteur fixe pour uniformité */
+    object-fit: cover; /* Recadre l’image pour remplir le conteneur */
+    object-position: center; /* Centre l’image */
+    display: block; /* Supprime les espaces blancs */
+}
+
+/* --- Corps --- */
+.offer-card-body {
+    padding: 1.5rem; /* Espacement interne */
+    flex-grow: 1; /* Prend tout l’espace vertical disponible */
+}
+
+/* --- Titre avec badge --- */
+.offer-title-row {
+    display: flex; /* Mise en ligne des éléments */
+    justify-content: space-between; /* Espace entre le titre et le badge */
+    align-items: center; /* Centrage vertical */
+    padding-bottom: 0.75rem; /* Espacement interne bas */
+    gap: 1rem; /* Évite que le texte se colle trop */
+}
+
+.offer-title-row h3 {
+    font-size: 1.5rem; /* Taille du titre */
+    margin: 0; /* Supprime la marge par défaut */
+    color: var(--c-text-primary); /* Couleur principale du texte */
+    flex: 1; /* Prend l’espace disponible à gauche */
+}
+
+
+.offer-card-body .description {
+    color: var(--c-text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--c-border);
+    margin-bottom: 1.15rem; /* Espacement sous la description */
+}
+
+
+/* --- Sous-titres --- */
+.offer-card-body h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--c-text-primary);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Listes --- */
+.offer-card-body ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    color: var(--c-text-secondary);
+}
+
+.offer-card-body ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.offer-card-body ul .material-icons {
+    font-size: 1.25rem;
+    color: var(--c-accent-cyan);
+}
+
+.offer-card-body .options-list .material-icons {
+    color: var(--c-success);
+}
+
+/* --- Footer --- */
+.offer-card-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--c-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.offer-card-footer .price {
+    font-size: 0.95rem;
+    color: var(--c-text-secondary);
+}
+
+.offer-card-footer .price strong {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--c-text-primary);
+}
