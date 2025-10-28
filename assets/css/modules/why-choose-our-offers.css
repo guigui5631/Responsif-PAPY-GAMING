@@ -1,0 +1,98 @@
+/* ================================================================
+   SECTION POURQUOI CHOISIR NOS OFFRES
+   ================================================================ */
+
+/* Grille principale qui contient tous les blocs "why-choose-us-item" */
+.why-choose-us-grid {
+    display: grid; /* Active le système de grille CSS */
+    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes de largeur égale */
+    gap: 1.5rem; /* Espace horizontal et vertical entre les éléments */
+}
+
+/* Style pour chaque élément de la grille */
+.why-choose-us-item{
+    display: flex; 
+    flex-direction: column; 
+
+    transition: transform 0.425s ease-in-out, background 0.425s ease-in-out, border-color 0.425s ease-in-out, box-shadow 0.425s ease-in-out;
+    cursor: default; 
+
+    background: var(--c-bg-card);   /* Fond de la carte */
+    border: 2px solid var(--c-border); /* Bordure de la carte */
+    border-radius: 15px;    /* Bords arrondis */
+    padding: 1.75rem; /* Espace sur les tout les cotés*/
+
+    height: 100%; /* Prends toute la hauteur disponible */
+    min-height: 17.75rem;
+}
+
+/* Effet au survol */
+.why-choose-us-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--c-glow-cyan);
+}
+
+/* En-tête de chaque élément */
+.why-choose-us-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Icône dans l'en-tête */
+.why-choose-us-header .material-icons {
+    padding: 0.75rem; /* Espacement interne */
+    border-radius: 10px; /* Bords arrondis */
+}
+
+.why-choose-us-item .material-icons.red{
+    background-color: var(--c-glow-cyan);
+}
+
+.why-choose-us-header .material-icons.cyan{
+    background-color: var(--c-glow-cyan);
+}
+
+.why-choose-us-item .red{
+    background-color: var(--c-glow-cyan);
+}
+.why-choose-us-header h3{
+    font-size: 1.2rem; /* Taille du titre */
+}
+
+/* Paragraphe dans chaque élément */
+.why-choose-us-item p{
+    color: var(--c-text-secondary); /* Couleur du texte secondaire */
+    font-size: 0.9rem; /* Taille de police légèrement plus petite */
+    line-height: 1.7; /* Hauteur de ligne pour la lisibilité */
+
+    word-break: break-word; /*Coupe les mots trop longs même sans espace*/
+    overflow-wrap: break-word; /*Coupe les mots qui débordent du conteneur*/
+    white-space: normal; /*Autorise les retours à la ligne automatiques*/
+    
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: auto;
+}
+
+.why-choose-us-tag .material-icons{
+    font-size: 1.15rem;
+}
+
+/* Tag dans chaque élément */
+.why-choose-us-tag{    
+    display: inline-flex; 
+    align-items: center;
+    gap: 0.5rem;
+
+    border-radius: 10px;
+    font-size: 0.8rem; /* Taille de police plus petite */
+    font-weight: 500; /* Poids de police moyen */
+
+    padding: 0.25rem 0.5rem;
+
+    margin-top: auto;
+
+}
+

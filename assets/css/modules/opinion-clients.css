@@ -1,0 +1,75 @@
+/* ================================================================
+   SECTION AVIS CLIENTS
+   ================================================================ */
+
+.reviews-carousel-container {
+    overflow: hidden;                       /* Masque le débordement */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    cursor: pointer;                        /* Curseur interactif */
+}
+
+.reviews-grid-scroller {
+    display: flex;                          /* Mise en ligne des cartes */
+    gap: 2rem;                              /* Espacement horizontal */
+    width: max-content;                     /* Largeur auto selon le contenu */
+    animation: scroll 40s linear infinite;  /* Animation de défilement */
+}
+
+.reviews-carousel-container:hover .reviews-grid-scroller,
+.reviews-carousel-container.is-paused .reviews-grid-scroller {
+    animation-play-state: paused;           /* Pause au survol ou état actif */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);           /* Départ à gauche */
+    }
+    to {
+        transform: translateX(calc(-50% - 1rem)); /* Déplacement vers la gauche */
+    }
+}
+
+.review-card {
+    background: var(--c-bg-card);              /* Fond personnalisé */
+    border: 1px solid var(--c-border);         /* Bordure fine */
+    border-radius: 20px;                       /* Coins arrondis */
+    padding: 2rem;                             /* Espacement interne */
+    backdrop-filter: blur(5px);                /* Effet de flou (glassmorphism) */
+    width: clamp(320px, 40vw, 450px);          /* Largeur responsive entre 320px et 450px */
+    flex-shrink: 0;                            /* Empêche la réduction de taille dans un flex container */
+}
+
+.review-header {
+    display: flex;                             /* Mise en ligne des éléments */
+    align-items: center;                       /* Alignement vertical centré */
+    gap: 1rem;                                 /* Espacement horizontal entre avatar et texte */
+    margin-bottom: 1.5rem;                     /* Espacement sous l’en-tête */
+}
+
+.review-avatar {
+    width: 50px;                               /* Largeur fixe de l’avatar */
+    height: 50px;                              /* Hauteur fixe de l’avatar */
+    border-radius: 50%;                        /* Forme circulaire */
+    object-fit: cover;                         /* Recadrage propre de l’image */
+}
+
+.review-info h4 {
+    font-size: 1.2rem;                         /* Taille du nom ou titre */
+}
+
+.review-stars {
+    color: #f1c40f;                            /* Couleur jaune pour les étoiles */
+}
+
+.review-body {
+    color: var(--c-text-secondary);            /* Couleur secondaire du texte */
+    font-style: italic;                        /* Style italique pour le témoignage */
+    line-height: 1.6;                          /* Hauteur de ligne pour lisibilité */
+}
+
+.view-more-container {
+    text-align: center;                     /* Centrage du bouton */
+    padding-top: 3rem;                       /* Espacement au-dessus */
+}
+
