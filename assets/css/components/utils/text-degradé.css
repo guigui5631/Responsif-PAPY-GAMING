@@ -1,0 +1,8 @@
+/* --- Texte avec dégradé --- */
+.gradient-text {
+    background: var(--gradient-primary); /* Dégradé violet → cyan */
+    -webkit-background-clip: text; /* Applique le dégradé uniquement au texte (Chrome/Safari) */
+    background-clip: text; /* Même effet pour d’autres navigateurs */
+    -webkit-text-fill-color: transparent; /* Rend la couleur du texte transparente pour laisser voir le dégradé */
+}
+
