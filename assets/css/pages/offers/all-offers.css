@@ -1,0 +1,47 @@
+@import url(/assets/css/modules/grid-offers.css);
+@import url(/assets/css/modules/why-choose-our-offers.css);
+@import url(/assets/css/modules/opinion-clients.css);
+
+/* =================================================================
+   NOUVEAUX STYLES POUR LA PAGE OFFRES GAMES
+   ================================================================= */
+
+#search-bar-id{
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Barre de recherche --- */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin: -2rem auto 4rem auto;
+    max-width: 100rem;
+}
+.search-bar {
+    position: relative;
+    width: 100%;
+}
+.search-bar .material-icons {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--c-text-secondary);
+}
+.search-bar input {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.75rem;
+    background-color: var(--c-bg-card);
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    color: var(--c-text-primary);
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--c-accent-cyan);
+    box-shadow: 0 0 15px var(--c-glow-cyan);
+}

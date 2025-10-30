@@ -1,0 +1,44 @@
+/* --- EFFET D’ARRIÈRE-PLAN NÉON ANIMÉ --- */
+
+body::before, body::after {
+    content: ''; /* Nécessaire pour afficher les pseudo-éléments */
+    position: fixed; /* Positionne les halos par rapport à la fenêtre */
+    top: 50%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    width: 60vw; /* Largeur en fonction de la fenêtre (viewport) */
+    height: 60vw; /* Hauteur proportionnelle pour garder un cercle */
+    max-width: 800px; /* Taille maximale du halo */
+    max-height: 800px;
+    border-radius: 50%; /* Donne une forme circulaire au halo */
+    z-index: -1; /* Place les halos derrière tout le contenu */
+    opacity: 0.15; /* Rends les halos discrets et doux */
+    filter: blur(120px); /* Floute pour un effet de lumière diffuse */
+    will-change: transform; /* Optimise les performances pour les animations */
+}
+
+/* Halo violet */
+body::before {
+    background: radial-gradient(circle, var(--c-accent-purple), transparent 60%);
+    /* Crée un dégradé circulaire violet → transparent */
+    animation: pulse-purple 20s infinite alternate cubic-bezier(0.5, 0, 0.5, 1);
+    /* Animation lente et fluide du halo violet */
+}
+
+/* Halo cyan */
+body::after {
+    background: radial-gradient(circle, var(--c-accent-cyan), transparent 60%);
+    /* Dégradé circulaire cyan → transparent */
+    animation: pulse-cyan 25s infinite alternate cubic-bezier(0.5, 0, 0.5, 1);
+    /* Animation indépendante, plus lente pour créer un effet de mouvement doux */
+}
+
+/* ===== ANIMATIONS DES HALOS ===== */
+@keyframes pulse-purple {
+    0% { transform: translate(-80%, -60%) scale(1); } /* Position et taille de départ */
+    100% { transform: translate(-40%, -50%) scale(1.3); } /* Se déplace et s’agrandit lentement */
+}
+
+@keyframes pulse-cyan {
+    0% { transform: translate(70%, 50%) scale(1.2); } /* Position et taille initiale du halo cyan */
+    100% { transform: translate(30%, 40%) scale(1); } /* Se déplace vers le centre et se réduit */
+}
