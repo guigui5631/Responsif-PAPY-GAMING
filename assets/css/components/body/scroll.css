@@ -1,0 +1,16 @@
+/* --- Effet d’apparition au défilement (Scroll Reveal) --- */
+.scroll-reveal {
+    opacity: 0; /* L’élément est invisible au départ */
+    transform: translateY(40px); /* Légèrement décalé vers le bas */
+    transition: 
+        opacity 0.8s cubic-bezier(0.5, 0, 0, 1), 
+        transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+        /* Animation fluide à l’apparition */
+}
+
+/* Quand l’élément devient visible (ajout de la classe .is-visible) */
+.scroll-reveal.is-visible { 
+    opacity: 1; /* Rendu visible */
+    transform: translateY(0); /* Remonte à sa position normale */
+}
+
