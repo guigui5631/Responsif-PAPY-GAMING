@@ -1,0 +1,19 @@
+.offer-vignnettes {
+    font-size: 0.7rem; /* Taille de police réduite pour un badge discret */
+    font-weight: 600; /* Texte en semi-gras pour renforcer la lisibilité */
+    padding: 0.2rem 0.6rem; /* Espacement interne : vertical | horizontal */
+    border-radius: 8px; /* Coins arrondis pour un effet badge/pill */
+    text-transform: uppercase; /* Met le texte en majuscules pour l’effet étiquette */
+    letter-spacing: 0.5px; /* Espacement entre les lettres pour lisibilité */
+    white-space: nowrap; /* Empêche le retour à la ligne du texte */
+}
+
+.offer-vignnettes.blue {
+    color: var(--c-accent-cyan); /* Couleur du texte basée sur la variable d’accent cyan */
+    background-color: rgba(0, 255, 255, 0.1); /* Fond cyan très léger, semi-transparent */
+}
+
+.offer-vignnettes.red {
+    color: var(--c-accent-red); /* Couleur du texte basée sur la variable d’accent cyan */
+    background-color: rgba(255, 0, 0, 0.205); /* Fond cyan très léger, semi-transparent */
+}
